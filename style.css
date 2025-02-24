@@ -110,7 +110,7 @@ h1, h2 {
     width: 100%;
 }
 
-.asaadzx, .School {
+.asaadzx, .School, .Arabic, .English, .Math, .Science, .SocialStudies, .Art, .Music, .PE, .Computer{
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -122,7 +122,7 @@ h1, h2 {
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.asaadzx:hover, .School:hover {
+.asaadzx:hover, .School:hover .Arabic:hover, .English:hover, .Math:hover, .Science:hover, .SocialStudies:hover, .Art:hover, .Music:hover, .PE:hover, .Computer:hover{
     background-color: #858336;
     color: white;
     transform: scale(1.1);
