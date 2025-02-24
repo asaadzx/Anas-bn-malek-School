@@ -1,12 +1,26 @@
-// filepath: /home/asaad/Documents/GitHub/Anas-bn-malek-School/Funcs.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Thank you for reaching out! We will get back to you soon.');
-            contactForm.reset();
+
+            const name = contactForm.querySelector('input[type="text"]').value;
+            const email = contactForm.querySelector('input[type="email"]').value;
+            const message = contactForm.querySelector('textarea').value;
+
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message
+            };
+
+            emailjs.send('service_gc0zlia', 'template_aupbbra', templateParams)
+                .then(function(response) {
+                    alert('Thank you for reaching out! We will get back to you soon.');
+                    contactForm.reset();
+                }, function(error) {
+                    alert('Failed to send the message. Please try again later.');
+                });
         });
     }
 

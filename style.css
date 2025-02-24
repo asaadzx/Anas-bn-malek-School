@@ -28,12 +28,13 @@ body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .navbar a:hover {
     background-color: #858336;
     color: white;
+    transform: scale(1.1);
 }
 
 .content {
@@ -54,6 +55,9 @@ body {
     width: 80%;
     max-width: 800px;
     text-align: center;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 1;
+    transform: translateY(20px);
 }
 
 h1, h2 {
@@ -69,6 +73,11 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.teacher-card:hover, .student-card:hover {
+    transform: scale(1.05);
 }
 
 .student-card {
@@ -83,4 +92,10 @@ h1, h2 {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .teacher-card, .student-card {
+        width: 100%;
+    }
 }
