@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
+
     (function() {
-        emailjs.init("Ja5oIWs-IcTsAThMK");
-    })();
+emailjs.init("Ja5oIWs-IcTsAThMK");
+})(); 
+
     const scrollToSection = (event) => {
         event.preventDefault();
         const targetId = event.target.getAttribute('href').substring(1);
@@ -41,5 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarLinks = document.querySelectorAll('.navbar a');
     navbarLinks.forEach(link => {
         link.addEventListener('click', scrollToSection);
+    });
+
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
