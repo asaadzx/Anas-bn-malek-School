@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     }
-
+    (function() {
+        emailjs.init("Ja5oIWs-IcTsAThMK");
+    })();
     const scrollToSection = (event) => {
         event.preventDefault();
         const targetId = event.target.getAttribute('href').substring(1);
