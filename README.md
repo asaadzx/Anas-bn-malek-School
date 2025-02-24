@@ -39,7 +39,3 @@ The project consists of the following files:
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to submit a pull request.
-
-## License
-
-This project is open-source and available under the MIT License.
