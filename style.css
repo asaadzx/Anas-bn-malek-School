@@ -98,12 +98,18 @@ h1, h2 {
 }
 
 .news-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 350px;
+    height: 250px;
+    border-radius: 50px;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;
     transform: scale(0.8);
+}
+
+.news-item p {
+    font-size: medium;
+    font-weight: bolder;
+    color: #362a0a;
 }
 
 .news-item img.visible {
