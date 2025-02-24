@@ -45,7 +45,7 @@ emailjs.init("Ja5oIWs-IcTsAThMK");
         link.addEventListener('click', scrollToSection);
     });
 
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.section, .teacher-card, .news-item img');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
