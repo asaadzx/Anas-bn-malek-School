@@ -94,8 +94,33 @@ h1, h2 {
     width: 100%;
 }
 
+@media (max-width: 1024px) {
+    .section {
+        width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .teacher-card, .student-card {
         width: 100%;
+    }
+    .navbar a {
+        padding: 10px 15px;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 8px 10px;
+    }
+    .section {
+        width: 95%;
+        padding: 15px;
+    }
+    .footer {
+        padding: 15px;
     }
 }
