@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    background-color: rgba(216, 179, 15, 0.171);
+    background-color: rgba(216, 179, 15, 0.589);
     backdrop-filter: blur(10px);
     overflow: hidden;
     position: fixed;
@@ -125,7 +125,7 @@ h1, h2 {
     width: 100%;
 }
 
-.asaadzx, .School, .Arabic, .English, .Math, .Science, .SocialStudies, .Art, .Music, .PE, .Computer{
+.Arabic, .English, .Math, .Science, .SocialStudies, .Art, .Music, .PE, .Computer{
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -137,10 +137,58 @@ h1, h2 {
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.asaadzx:hover, .School:hover .Arabic:hover, .English:hover, .Math:hover, .Science:hover, .SocialStudies:hover, .Art:hover, .Music:hover, .PE:hover, .Computer:hover{
+.asaadzx, .School{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #d8b30f;
+    color: #362a0a;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.asaadzx:hover, .School:hover{
     background-color: #858336;
     color: white;
     transform: scale(1.1);
+}
+
+.Arabic:hover, .English:hover, .Math:hover, .Science:hover, .SocialStudies:hover, .Art:hover, .Music:hover, .PE:hover, .Computer:hover{
+    background-color: #858336;
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #d8b30f;
+    box-shadow: 0 0 10px rgba(216, 179, 15, 0.5);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #d8b30f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #858336;
+    transform: scale(1.05);
 }
 
 @media (max-width: 1024px) {
