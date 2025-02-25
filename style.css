@@ -131,31 +131,10 @@ h1, h2 {
     width: 100%;
 }
 
-.Arabic, .English, .Math, .Science, .SocialStudies, .Art, .Music, .PE, .Computer{
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #d8b30f;
-    color: #362a0a;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
 .dropdown-container {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-#downloadLinks {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -170,6 +149,19 @@ h1, h2 {
     color: #1d1c1b;
 }
 
+#downloadOption:hover {
+    background-color: #e2e6ea;
+}
+
+#downloadLinks {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #downloadLinks li {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -179,16 +171,27 @@ h1, h2 {
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
 }
 
 #downloadLinks li a {
     text-decoration: none;
-    color: #27271ecb;
     font-weight: bold;
     flex-grow: 1;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #d8b30f;
+    color: #362a0a;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
-.asaadzx, .School{
+.asaadzx, .School {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -224,25 +227,17 @@ h1, h2 {
     transition: all 0.3s ease;
 }
 
-.asaadzx:hover, .School:hover{
+.asaadzx:hover, .School:hover {
     background-color: #858336;
     color: white;
     transform: scale(1.1);
 }
-
-.Arabic:hover, .English:hover, .Math:hover, .Science:hover, .SocialStudies:hover, .Art:hover, .Music:hover, .PE:hover, .Computer:hover{
-    background-color: #858336;
-    color: white;
-    transform: scale(1.1);
-}
-
 
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: #d8b30f;
     box-shadow: 0 0 10px rgba(216, 179, 15, 0.5);
     outline: none;
 }
-
 
 .contact-form button:hover {
     background-color: #858336;
@@ -256,12 +251,26 @@ h1, h2 {
 
 #downloadLinks li a:hover {
     text-decoration: underline;
+    background-color: #858336;
+    color: white;
+    transform: scale(1.1);
 }
 
 #downloadLinks li::before {
     content: "📄";
     margin-right: 10px;
     font-size: 1.5em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1024px) {

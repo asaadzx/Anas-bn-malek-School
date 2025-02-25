@@ -62,19 +62,28 @@ emailjs.init("Ja5oIWs-IcTsAThMK");
 document.addEventListener('DOMContentLoaded', function() {
     const links = {
         Prep1: {
-            English: "https://example.com/option2/english",
-            Arabic: "https://example.com/option2/arabic",
-            Science: "https://example.com/option2/science"
+            English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/English%20language_1_Preparatory/English%20language_1_Preparatory.html",
+            Arabic: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Arabic%20language__1_Preparatory/Arabic%20language__1_Preparatory.html",
+            Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Science_ENGLISH_1_Preparatory/Science_ENGLISH_1_Preparatory.html",
+            Math: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Math_English_1_Preparatory/Math_English_1_Preparatory.html",
+            Social: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Social%20Studies_1_Preparatory/Social_Studies_1_Preparatory.html",
+            ICT: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/ICT_ENGLISH_1_Preparatory/ICT_ENGLISH_1_Preparatory.html"
         },
         Prep2: {
             English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/English%20language_2_Preparatory/English%20language_2_Preparatory.html",
             Arabic: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Arabic%20language__2_Preparatory/Arabic%20language__2_Preparatory.html",
-            Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Science_ENGLISH_2_Preparatory/Science_ENGLISH_2_Preparatory.html"
+            Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Science_ENGLISH_2_Preparatory/Science_ENGLISH_2_Preparatory.html",
+            Math: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Math_English_2_Preparatory/Math_English_2_Preparatory.html",
+            Social: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Social%20Studies_2_Preparatory/Social%20Studies_2_Preparatory.html",
+            ICT: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/ICT_ENGLISH_2_Preparatory/ICT_ENGLISH_2_Preparatory.html"
         },
         Prep3: {
-            English: "https://example.com/option3/english",
-            Arabic: "https://example.com/option3/arabic",
-            Science: "https://example.com/option3/science"
+            English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/English%20language_3_Preparatory/English%20language_3_Preparatory.html",
+            Arabic: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/Arabic%20language__3_Preparatory/Arabic%20language__3_Preparatory.html",
+            Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/Science_ENGLISH_3_Preparatory/Science_ENGLISH_3_Preparatory.html",
+            Math: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/Math_English_3_Preparatory/Math_English_3_Preparatory.html",
+            Social: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/Social%20Studies_3_Preparatory/Social_Studies_3_Preparatory.html",
+            ICT: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory3/Term2/Streem/ICT_ENGLISH_3_Preparatory/ICT_ENGLISH_3_Preparatory.html"
         }
     };
 
@@ -83,7 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.English').href = links[selectedOption].English;
         document.querySelector('.Arabic').href = links[selectedOption].Arabic;
         document.querySelector('.Science').href = links[selectedOption].Science;
-
+        document.querySelector('.Math').href = links[selectedOption].Math;
+        document.querySelector('.Social').href = links[selectedOption].Social;
+        document.querySelector('.ICT').href = links[selectedOption].ICT;
+        
         document.querySelectorAll('#downloadLinks li').forEach(li => {
             li.classList.remove('show');
             setTimeout(() => li.classList.add('show'), 100);
