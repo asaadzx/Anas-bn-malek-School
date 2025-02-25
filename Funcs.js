@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -25,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     (function() {
-emailjs.init("Ja5oIWs-IcTsAThMK");
-})(); 
+        emailjs.init("Ja5oIWs-IcTsAThMK");
+    })(); 
 
     const scrollToSection = (event) => {
         event.preventDefault();
@@ -57,9 +64,7 @@ emailjs.init("Ja5oIWs-IcTsAThMK");
     sections.forEach(section => {
         observer.observe(section);
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const links = {
         Prep1: {
             English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/English%20language_1_Preparatory/English%20language_1_Preparatory.html",

@@ -19,7 +19,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    transition: height 0.3s ease;
 }
 
 .navbar a {
@@ -36,6 +39,56 @@ body {
     background-color: #858336;
     color: white;
     transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #362a0a;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.navbar.active {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.active a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content {
@@ -98,7 +151,7 @@ h1, h2 {
 }
 
 .news-item img {
-    width: 350px;
+    width: 300px;
     height: 250px;
     border-radius: 50px;
     transition: transform 0.3s, opacity 0.3s;
@@ -280,14 +333,29 @@ h1, h2 {
 }
 
 @media (max-width: 768px) {
-    .teacher-card, .student-card {
-        width: 100%;
-    }
     .navbar a {
-        padding: 10px 15px;
+        display: none;
     }
-    .content {
+
+    .navbar.active a {
+        display: block;
+        width: 100%;
+        text-align: center;
         padding: 10px;
+        border-top: 1px solid #ddd;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar.active {
+        align-items: center;
     }
 }
 
