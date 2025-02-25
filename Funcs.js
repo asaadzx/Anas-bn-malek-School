@@ -58,3 +58,42 @@ emailjs.init("Ja5oIWs-IcTsAThMK");
         observer.observe(section);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = {
+        Prep1: {
+            English: "https://example.com/option2/english",
+            Arabic: "https://example.com/option2/arabic",
+            Science: "https://example.com/option2/science"
+        },
+        Prep2: {
+            English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/English%20language_2_Preparatory/English%20language_2_Preparatory.html",
+            Arabic: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Arabic%20language__2_Preparatory/Arabic%20language__2_Preparatory.html",
+            Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Science_ENGLISH_2_Preparatory/Science_ENGLISH_2_Preparatory.html"
+        },
+        Prep3: {
+            English: "https://example.com/option3/english",
+            Arabic: "https://example.com/option3/arabic",
+            Science: "https://example.com/option3/science"
+        }
+    };
+
+    const downloadOption = document.getElementById('downloadOption');
+    const updateLinks = (selectedOption) => {
+        document.querySelector('.English').href = links[selectedOption].English;
+        document.querySelector('.Arabic').href = links[selectedOption].Arabic;
+        document.querySelector('.Science').href = links[selectedOption].Science;
+
+        document.querySelectorAll('#downloadLinks li').forEach(li => {
+            li.classList.remove('show');
+            setTimeout(() => li.classList.add('show'), 100);
+        });
+    };
+
+    downloadOption.addEventListener('change', function() {
+        updateLinks(this.value);
+    });
+
+    // Initial setup
+    updateLinks(downloadOption.value);
+});

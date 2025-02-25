@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anas bn Malek School</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="Funcs.js" defer></script>
 </head>
 <body>
 
@@ -66,12 +64,6 @@
                 <p>He is the Best give us ability to be pathint and responsible.</p>
             </div>
 
-            <div class="teacher-card">
-                <h3>Mr. Asaad</h3>
-                <p>Web Development Teacher</p>
-                <p>He IS THE BEST</p>
-            </div>
-
         </section>
 
         <section id="students" class="section">
@@ -111,10 +103,19 @@
         <section id="downloads" class="section">
             <h2>Downloads</h2>
             <p>Download important documents and resources:</p>
-            <ul>
-                <li><a class="English" href="https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/English%20language_2_Preparatory/English%20language_2_Preparatory.html" target="_blank">English evalution FOR prep2</a></li>
-                <li><a class="Arabic" href="https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Arabic%20language__2_Preparatory/Arabic%20language__2_Preparatory.html" target="_blank">Arabic evalution FOR prep2</a></li>
-                <li><a class="Science" href="https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/Science_ENGLISH_2_Preparatory/Science_ENGLISH_2_Preparatory.html" target="_blank">Science evalution FOR prep2</a></li>
+            
+            <div class="dropdown-container">
+                <select id="downloadOption">
+                    <option value="Prep1">Prep1</option>
+                    <option value="Prep2">Prep2</option>
+                    <option value="Prep3">Prep3</option>
+                </select>
+            </div>
+            
+            <ul id="downloadLinks">
+                <li><a class="English" href="" target="_blank">English evaluation FOR prep2</a></li>
+                <li><a class="Arabic" href="" target="_blank">Arabic evaluation FOR prep2</a></li>
+                <li><a class="Science" href="" target="_blank">Science evaluation FOR prep2</a></li>
             </ul>
         </section>
 
@@ -139,6 +140,7 @@
         </section>
 
     </div>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="Funcs.js" defer></script>
 </body>
 </html>
