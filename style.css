@@ -161,13 +161,13 @@ h1, h2 {
 
 #downloadOption {
     padding: 10px;
-    border: 2px solid #007BFF;
+    border: 2px solid #d8b30f;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     font-size: 16px;
     background-color: #f8f9fa;
-    color: #007BFF;
+    color: #1d1c1b;
 }
 
 #downloadLinks li {
@@ -183,7 +183,7 @@ h1, h2 {
 
 #downloadLinks li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #27271ecb;
     font-weight: bold;
     flex-grow: 1;
 }
