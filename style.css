@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     align-items: center;
 }
 
+/* Navbar Styles */
 .navbar {
     background-color: rgba(216, 179, 15, 0.589);
     backdrop-filter: blur(10px);
@@ -33,12 +35,6 @@ body {
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
-.navbar a:hover {
-    background-color: #858336;
-    color: white;
-    transform: scale(1.1);
 }
 
 .hamburger {
@@ -91,6 +87,7 @@ body {
     }
 }
 
+/* Content Styles */
 .content {
     padding: 20px;
     margin-top: 60px;
@@ -142,10 +139,6 @@ h1, h2 {
     transform: translateY(0);
 }
 
-.teacher-card:hover, .student-card:hover {
-    transform: scale(1.05);
-}
-
 .student-card {
     background-color: #ffe0b2;
 }
@@ -168,10 +161,6 @@ h1, h2 {
 .news-item img.visible {
     opacity: 1;
     transform: scale(1);
-}
-
-.news-item img:hover {
-    transform: scale(1.1);
 }
 
 .footer {
@@ -200,10 +189,6 @@ h1, h2 {
     font-size: 16px;
     background-color: #f8f9fa;
     color: #1d1c1b;
-}
-
-#downloadOption:hover {
-    background-color: #e2e6ea;
 }
 
 #downloadLinks {
@@ -280,6 +265,21 @@ h1, h2 {
     transition: all 0.3s ease;
 }
 
+/* Hover Styles */
+.navbar a:hover {
+    background-color: #858336;
+    color: white;
+    transform: scale(1.1);
+}
+
+.teacher-card:hover, .student-card:hover {
+    transform: scale(1.05);
+}
+
+.news-item img:hover {
+    transform: scale(1.1);
+}
+
 .asaadzx:hover, .School:hover {
     background-color: #858336;
     color: white;
@@ -309,6 +309,7 @@ h1, h2 {
     transform: scale(1.1);
 }
 
+/* Additional Styles */
 #downloadLinks li::before {
     content: "📄";
     margin-right: 10px;
@@ -326,6 +327,7 @@ h1, h2 {
     }
 }
 
+/* Media Queries */
 @media (max-width: 1024px) {
     .section {
         width: 90%;

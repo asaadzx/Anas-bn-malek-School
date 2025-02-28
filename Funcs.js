@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');
     const navbar = document.querySelector('.navbar');
 
@@ -6,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.classList.toggle('active');
     });
 
+    // Contact form submission
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -31,10 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Initialize EmailJS
     (function() {
         emailjs.init("Ja5oIWs-IcTsAThMK");
     })(); 
 
+    // Smooth scroll to section
     const scrollToSection = (event) => {
         event.preventDefault();
         const targetId = event.target.getAttribute('href').substring(1);
@@ -47,11 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Add smooth scroll to navbar links
     const navbarLinks = document.querySelectorAll('.navbar a');
     navbarLinks.forEach(link => {
         link.addEventListener('click', scrollToSection);
     });
 
+    // Intersection Observer for animations
     const sections = document.querySelectorAll('.section, .teacher-card, .news-item img');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
+    // Download links based on dropdown selection
     const links = {
         Prep1: {
             English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/English%20language_1_Preparatory/English%20language_1_Preparatory.html",
@@ -116,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+        // Update download links based on selected option
     const downloadOption = document.getElementById('downloadOption');
     const updateLinks = (selectedOption) => {
         document.querySelector('.English').href = links[selectedOption].English;
@@ -131,10 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    // Event listener for dropdown change
     downloadOption.addEventListener('change', function() {
         updateLinks(this.value);
     });
 
-    // Initial setup
+    // Initial setup for download links
     updateLinks(downloadOption.value);
 });
