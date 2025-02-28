@@ -42,8 +42,8 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 ## 📧 Contact
 
-If you have any questions or need further assistance, please reach out to us at [asaad.work2010@gmail.com](mailto:asaad.work2010@gmail.com).
+If you have any questions or need further assistance, please reach out to us at [asaad.work2010@gmail.com](mailto:asaad.work2010@gmail.com). 𓆝 𓆟 𓆞 𓆝 𓆟
 
 ---
 
-Thank you for visiting the Anas bn Malek School project! We hope you enjoy exploring our webpage. 🌟
+Thank you for visiting the Anas bn Malek School project! We hope you enjoy exploring our website. 🌟 (ㅅ´ ˘ `)
