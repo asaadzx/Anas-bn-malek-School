@@ -129,14 +129,36 @@ h1, h2 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
     opacity: 0;
     transform: translateY(20px);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .teacher-card.visible, .student-card.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.teacher-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(216, 179, 15, 0.1);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.teacher-card:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .student-card {
@@ -274,6 +296,97 @@ h1, h2 {
 
 .teacher-card:hover, .student-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-card.clicked {
+    animation: cardClick 0.5s forwards;
+}
+
+@keyframes cardClick {
+    0% {
+        transform: scale(1.05);
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Teacher profile page styles */
+.teacher-profile {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.teacher-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d8b30f;
+    margin-right: 30px;
+}
+
+.teacher-profile-info {
+    flex: 1;
+}
+
+.teacher-profile-bio {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.teacher-social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.teacher-social-links a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #d8b30f;
+    color: #362a0a;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.teacher-social-links a:hover {
+    background-color: #858336;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d8b30f;
+    color: #362a0a;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #858336;
+    color: white;
 }
 
 .news-item img:hover {

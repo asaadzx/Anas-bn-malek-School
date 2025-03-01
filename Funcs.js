@@ -6,6 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', function() {
         navbar.classList.toggle('active');
     });
+    
+    // Teacher card click functionality
+    const teacherCards = document.querySelectorAll('.teacher-card');
+    teacherCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const teacherId = this.getAttribute('data-teacher');
+            this.classList.add('clicked');
+            
+            setTimeout(() => {
+                window.location.href = `Teachers/${teacherId}.html`;
+            }, 500);
+        });
+    });
 
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
