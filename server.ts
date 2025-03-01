@@ -1,12 +1,11 @@
-import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
-import { serveFile } from "https://deno.land/std@0.114.0/http/file_server.ts";
 
-const server = serve({ port: 3030 });
+import { serve } from "https://deno.land/std/http/server.ts";
 
-console.log("HTTP webserver running. Access it at: http://localhost:3030/");
+const port = 3030;
+console.log(`HTTP webserver running. Access it at: http://0.0.0.0:${port}/`);
 
-for await (const request of server) {
-  const url = new URL(request.url, `http://${request.headers.get("host")}`);
+serve(async (request) => {
+  const url = new URL(request.url);
   let filePath = url.pathname;
 
   if (filePath === "/") {
@@ -14,9 +13,38 @@ for await (const request of server) {
   }
 
   try {
-    const response = await serveFile(request, `.${filePath}`);
-    request.respond(response);
+    const file = await Deno.readFile(`.${filePath}`);
+    
+    // Determine content type based on file extension
+    const contentType = getContentType(filePath);
+    
+    return new Response(file, {
+      status: 200,
+      headers: {
+        "content-type": contentType,
+      },
+    });
   } catch {
-    request.respond({ status: 404, body: "404 - Not Found" });
+    return new Response("404 - Not Found", { status: 404 });
   }
+}, { port });
+
+// Helper function to determine content type
+function getContentType(path: string): string {
+  const extension = path.split('.').pop()?.toLowerCase();
+  
+  const contentTypes: Record<string, string> = {
+    'html': 'text/html',
+    'css': 'text/css',
+    'js': 'text/javascript',
+    'json': 'application/json',
+    'png': 'image/png',
+    'jpg': 'image/jpeg',
+    'jpeg': 'image/jpeg',
+    'gif': 'image/gif',
+    'svg': 'image/svg+xml',
+    'ico': 'image/x-icon'
+  };
+  
+  return contentTypes[extension || ''] || 'text/plain';
 }
