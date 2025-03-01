@@ -20,6 +20,8 @@ The project consists of the following files:
   
 - **Information Sections**: The webpage includes dedicated sections for information about our teachers and students, showcasing their achievements and contributions.
 
+- **AI Contributing Tool**: AI Contributing Tool for Teachers for Easy Contributing and devalope 
+ 
 ## 🛠️ How to Update the Webpage (Only For School Student Developers)
 
 ### By Cloning
