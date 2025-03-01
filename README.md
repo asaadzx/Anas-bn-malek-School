@@ -40,6 +40,8 @@ The project consists of the following files:
 
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to submit a pull request.
 
+**I NEED SOMEONE TO WORK WITH ME ( ꩜ ᯅ ꩜;)⁭ ⁭**
+
 ## 📧 Contact
 
 If you have any questions or need further assistance, please reach out to us at [asaad.work2010@gmail.com](mailto:asaad.work2010@gmail.com). 𓆝 𓆟 𓆞 𓆝 𓆟
