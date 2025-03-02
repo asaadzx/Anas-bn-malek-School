@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     hamburger.addEventListener('click', function() {
         navbar.classList.toggle('active');
     });
-    
+
     // Teacher card click functionality
     const teacherCards = document.querySelectorAll('.teacher-card');
     teacherCards.forEach(card => {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Intersection Observer for animations
-    const sections = document.querySelectorAll('.section, .teacher-card, .news-item img');
+    const sections = document.querySelectorAll('.section, .teacher-card, .news-item img, .new-knowledge-item');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
