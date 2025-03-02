@@ -487,3 +487,55 @@ h1, h2 {
         padding: 15px;
     }
 }
+
+/* Responsive Styles for Teacher Profile Page */
+@media (max-width: 768px) {
+    .teacher-profile-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher-profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .teacher-profile-info {
+        text-align: center;
+    }
+
+    .teacher-social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-profile {
+        padding: 20px;
+    }
+
+    .teacher-profile-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher-profile-image {
+        width: 120px;
+        height: 120px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .teacher-profile-info {
+        text-align: center;
+    }
+
+    .teacher-social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .teacher-social-links a {
+        margin-bottom: 10px;
+    }
+}
