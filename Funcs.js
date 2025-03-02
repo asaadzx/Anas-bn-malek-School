@@ -164,12 +164,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         Sec: {
             Sec1: {
-                English: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/English%20language_1_Preparatory/English%20language_1_Preparatory.html",
-                Arabic: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Arabic%20language__1_Preparatory/Arabic%20language__1_Preparatory.html",
-                Science: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Science_ENGLISH_1_Preparatory/Science_ENGLISH_1_Preparatory.html",
-                Math: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Math_English_1_Preparatory/Math_English_1_Preparatory.html",
-                Social: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/Social%20Studies_1_Preparatory/Social_Studies_1_Preparatory.html",
-                ICT: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory1/Term2/Streem/ICT_ENGLISH_1_Preparatory/ICT_ENGLISH_1_Preparatory.html"
+                English: "https://example.com/sec2/english",
+                Arabic: "https://example.com/sec2/arabic",
+                Science: "https://example.com/sec2/science",
+                Math: "https://example.com/sec2/math",
+                Social: "https://example.com/sec2/social",
+                ICT: "https://example.com/sec2/ICT"
             },
             Sec2: {
                 English: "https://example.com/sec2/english",
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Science: "https://example.com/sec2/science",
                 Math: "https://example.com/sec2/math",
                 Social: "https://example.com/sec2/social",
-                ICT: "https://elearnningcontent.blob.core.windows.net/elearnningcontent/content/2025/Prepratory/Prepratory2/Term2/Streem/ICT_ENGLISH_2_Preparatory/ICT_ENGLISH_2_Preparatory.html"
+                ICT: "https://example.com/sec2/ICT"
             },
             Sec3: {
                 English: "https://example.com/sec2/english",
