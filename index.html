@@ -1,208 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anas bn Malek School</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Images/School logo.png" type="image/x-icon">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Images/School logo.png" type="image/x-icon" />
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#teachers">Teachers</a>
-        <a href="#students">Students</a>
-        <a href="#new-knowledge">New Knowledge</a>
-        <a href="#news">News</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#contact">Contact</a>
-        <a href="#developer">Developer</a>
-        <button class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#students">Students</a>
+      <a href="#new-knowledge">New Knowledge</a>
+      <a href="#news">News</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contact">Contact</a>
+      <a href="#developer">Developer</a>
+      <button class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
 
     <div class="content">
-        <!-- Home Section -->
-        <section id="home" class="section">
-            <h1>Welcome to Anas bn Malek School</h1>
-            <img class="School-img" src="SCHOOL IMAGE LINK" alt="SCHOOL IMAGE">
-            <p>We are dedicated to providing quality education in a nurturing environment.</p>
-        </section>
+      <!-- Home Section -->
+      <section id="home" class="section">
+        <h1>Welcome to Anas bn Malek School</h1>
+        <img class="School-img" src="SCHOOL IMAGE LINK" alt="SCHOOL IMAGE" />
+        <p>
+          We are dedicated to providing quality education in a nurturing
+          environment.
+        </p>
+      </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2>About Our School</h2>
-            <p>Located in the heart of Egypt, Anas bn Malek School is known for its commitment to excellence in education. Our experienced teachers and supportive staff create a positive learning atmosphere for all students.</p>
-        </section>
+      <!-- About Section -->
+      <section id="about" class="section">
+        <h2>About Our School</h2>
+        <p>
+          Located in the heart of Egypt, Anas bn Malek School is known for its
+          commitment to excellence in education. Our experienced teachers and
+          supportive staff create a positive learning atmosphere for all
+          students.
+        </p>
+      </section>
 
-        <!-- Teachers Section -->
-        <section id="teachers" class="section">
-            <h2>Meet Our Teachers</h2>
-            
-            <div class="teacher-card" data-teacher="sara">
-                <h3>Ms. Sara</h3>
-                <p>English Teacher</p>
-                <p>Ms. Sara is passionate about helping students improve their English skills.</p>
-            </div>
-            
-            <div class="teacher-card" data-teacher="hend">
-                <h3>Ms. Hend</h3>
-                <p>Computer Teacher</p>
-                <p>Ms. Hend makes computer lessons very easy to learn with fun.</p>
-            </div>
+      <!-- Teachers Section -->
+      <section id="teachers" class="section">
+        <h2>Meet Our Teachers</h2>
 
-            <div class="teacher-card" data-teacher="ahmed">
-                <h3>Mr. Ahmed S3eed</h3>
-                <p>Mathematics Teacher</p>
-                <p>With over 10 years of experience, Mr. Ahmed inspires students to love math.</p>
-            </div>
-            
-            <div class="teacher-card" data-teacher="yasmen">
-                <h3>Ms. Yasmen</h3>
-                <p>Science Teacher</p>
-                <p>Ms. Yasmen brings science to life with amazing experiments.</p>
-            </div>
-            
-            <div class="teacher-card" data-teacher="khaled">
-                <h3>Mr. Khaled</h3>
-                <p>Arabic Teacher</p>
-                <p>He is the best, giving us the ability to be patient and responsible.</p>
-            </div>
+        <div class="teacher-card" data-teacher="sara">
+          <h3>Ms. Sara</h3>
+          <p>English Teacher</p>
+          <p>
+            Ms. Sara is passionate about helping students improve their English
+            skills.
+          </p>
+        </div>
 
-        </section>
+        <div class="teacher-card" data-teacher="hend">
+          <h3>Ms. Hend</h3>
+          <p>Computer Teacher</p>
+          <p>Ms. Hend makes computer lessons very easy to learn with fun.</p>
+        </div>
 
-        <!-- Students Section -->
-        <section id="students" class="section">
-            <h2>Our Lovely Students</h2>
-            <p>Our students are the heart of our school. They are curious, creative, and eager to learn. Here are some of their achievements:</p>
-            <ul>
-                <li>Science Fair Winners</li>
-                <li>Art Competition Finalists</li>
-                <li>Sports Champions Football tournament every year</li>
-            </ul>
-        </section>
+        <div class="teacher-card" data-teacher="ahmed">
+          <h3>Mr. Ahmed S3eed</h3>
+          <p>Mathematics Teacher</p>
+          <p>
+            With over 10 years of experience, Mr. Ahmed inspires students to
+            love math.
+          </p>
+        </div>
 
-        <!-- New Knowledge Section -->
-        <section id="new-knowledge" class="section">
-            <h2>New Knowledge</h2>
-            <div class="new-knowledge-container">
-                <div class="new-knowledge-item">
-                    <h3>بَابُ فَضْلِ الْعِلْمِ</h3>
-                    <br>
-                    <p>"وَقَوْلِ اللَّهِ تَعَالَى: {يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ وَاللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ}.."</p>
-                    <br>
-                    <p>. وَقَوْلِهِ عَزَّ وَجَلَّ: {رَبِّ زِدْنِي عِلْمًا}</p>
-                    <a href="https://sunnah.com/bukhari/3" target="_blank">Read more</a>
-                </div>
-                <div class="new-knowledge-item">
-                    <h3>بَابُ دُعَاؤُكُمْ إِيمَانُكُمْ </h3>
-                    <br>
-                    <p>لِقَوْلِهِ تَعَالى: {قُلْ مَا يَعْبَؤُا بِكُمْ رَبِّ لَوْلَا دُعَاؤُكُمْ}</p>
-                    <br>
-                    <p> [الفرقان: ٧٧] وَمَعْنَى الدُّعاءِ في اللُّغَةِ (الإيمان)</p>
-                    <a href="https://sunnah.com/bukhari/2" target="_blank">Read more</a>
-                </div>
-                <div class="new-knowledge-item">
-                    <h3>الشيخ الحصري</h3>
-                    <br>
-                    <p>الشيخ محمود خليل الحصري هو قارئ قرآن مصري مشهور، ولد في 17 سبتمبر 1917 وتوفي في 24 نوفمبر 1980، وهو من أبرز قراء القرآن في العالم الإسلامي.</p>
-                    <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D8%A7%D9%84%D8%AD%D8%B5%D8%B1%D9%8A" target="_blank">Read more</a>
-                </div>
-            </div>
-            <div class="video-container">
-                <h3>Watch this video about الشيخ الحصري  </h3>
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_LyJkA3C4Pk?si=oBG45LhpAOg-6-07&amp;start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
+        <div class="teacher-card" data-teacher="yasmen">
+          <h3>Ms. Yasmen</h3>
+          <p>Science Teacher</p>
+          <p>Ms. Yasmen brings science to life with amazing experiments.</p>
+        </div>
 
-        <!-- News Section -->
-        <section id="news" class="section">
-            <h2>School News</h2>
-            <p>Stay updated with the latest news and events happening at Anas bn Malek School.</p>
-            <ul>
-                <li class="news-item">
-                    <img src="Images/RAmadan 2A .jpg" alt="School calibrat with Ramadan">
-                    <p>School calibrat with Ramadan and Changed the look of Classes</p>
-                    <p>Comments: The School now looks amazing -Asaad 2A</p>
-                </li>
-                <br>
-                <li class="news-item">
-                    <img src="Images/ART 'egypt in her children eyes'.png" alt="ART Competition">
-                    <p>ART Competition 'Egypt IN HER CHILDREN EYES'</p>
-                    <p>Comments: WHO wins will get full marks in ART! - ART TEACHER</p>
-                </li>
-                <br>
-                <li class="news-item">
-                    <img src="Images/Screenshot From 2025-02-25 17-08-34.png" alt="Art exhibition">
-                    <p>Student in the School and the Principal agreed!</p>
-                    <p>Comments: Very well! - Student C</p>
-                </li>
-            </ul>
-        </section>
+        <div class="teacher-card" data-teacher="khaled">
+          <h3>Mr. Khaled</h3>
+          <p>Arabic Teacher</p>
+          <p>
+            He is the best, giving us the ability to be patient and responsible.
+          </p>
+        </div>
+      </section>
 
-        <!-- Downloads Section -->
-        <section id="downloads" class="section">
-            <h2>Downloads</h2>
-            <p>Download important documents and resources:</p>
-            
-            <div class="dropdown-container">
-                <select id="downloadOption">
-                    <option value="Primary-Grade1">Grade-1</option>
-                    <option value="Primary-Grade2">Grade-2</option>
-                    <option value="Primary-Grade3">Grade-3</option>
-                    <option value="Primary-Grade4">Grade-4</option>
-                    <option value="Primary-Grade5">Grade-5</option>
-                    <option value="Primary-Grade6">Grade-6</option>
-                    <option value="Prep-Prep1">Prep-1</option>
-                    <option value="Prep-Prep2">Prep-2</option>
-                    <option value="Prep-Prep3">Prep-3</option>
-                    <option value="Sec-Sec1">Sec-1</option>
-                    <option value="Sec-Sec2">Sec-2</option>
-                    <option value="Sec-Sec3">Sec-3</option>
-                </select>
-            </div>
-            
-            <ul id="downloadLinks">
-                <li><a class="English" href="" target="_blank">English evaluation</a></li>
-                <li><a class="Arabic" href="" target="_blank">Arabic evaluation</a></li>
-                <li><a class="Science" href="" target="_blank">Science evaluation</a></li>
-                <li><a class="Math" href="" target="_blank">Math evaluation</a></li>
-                <li><a class="Social" href="" target="_blank">الدراسات الاجتماعية evaluation</a></li>
-                <li><a class="ICT" href="" target="_blank">ICT evaluation</a></li>
-            </ul>
-        </section>
+      <!-- Students Section -->
+      <section id="students" class="section">
+        <h2>Our Lovely Students</h2>
+        <p>
+          Our students are the heart of our school. They are curious, creative,
+          and eager to learn. Here are some of their achievements:
+        </p>
+        <ul>
+          <li>Science Fair Winners</li>
+          <li>Art Competition Finalists</li>
+          <li>Sports Champions Football tournament every year</li>
+        </ul>
+      </section>
 
+      <!-- New Knowledge Section -->
+      <section id="new-knowledge" class="section">
+        <h2>New Knowledge</h2>
+        <div class="new-knowledge-container">
+          <div class="new-knowledge-item">
+            <h3>بَابُ فَضْلِ الْعِلْمِ</h3>
+            <br />
+            <p>
+              "وَقَوْلِ اللَّهِ تَعَالَى: {يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا
+              مِنْكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ وَاللَّهُ بِمَا
+              تَعْمَلُونَ خَبِيرٌ}.."
+            </p>
+            <br />
+            <p>. وَقَوْلِهِ عَزَّ وَجَلَّ: {رَبِّ زِدْنِي عِلْمًا}</p>
+            <a href="https://sunnah.com/bukhari/3" target="_blank">Read more</a>
+          </div>
+          <div class="new-knowledge-item">
+            <h3>بَابُ دُعَاؤُكُمْ إِيمَانُكُمْ</h3>
+            <br />
+            <p>
+              لِقَوْلِهِ تَعَالى: {قُلْ مَا يَعْبَؤُا بِكُمْ رَبِّ لَوْلَا
+              دُعَاؤُكُمْ}
+            </p>
+            <br />
+            <p>[الفرقان: ٧٧] وَمَعْنَى الدُّعاءِ في اللُّغَةِ (الإيمان)</p>
+            <a href="https://sunnah.com/bukhari/2" target="_blank">Read more</a>
+          </div>
+          <div class="new-knowledge-item">
+            <h3>الشيخ الحصري</h3>
+            <br />
+            <p>
+              الشيخ محمود خليل الحصري هو قارئ قرآن مصري مشهور، ولد في 17 سبتمبر
+              1917 وتوفي في 24 نوفمبر 1980، وهو من أبرز قراء القرآن في العالم
+              الإسلامي.
+            </p>
+            <a
+              href="https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D8%A7%D9%84%D8%AD%D8%B5%D8%B1%D9%8A"
+              target="_blank"
+              >Read more</a
+            >
+          </div>
+        </div>
+        <div class="video-container">
+          <h3>Watch this video about الشيخ الحصري</h3>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/_LyJkA3C4Pk?si=oBG45LhpAOg-6-07&amp;start=9"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to learn more about our school, please reach out!</p>
-            <form id="contact-form" class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+      <!-- News Section -->
+      <section id="news" class="section">
+        <h2>School News</h2>
+        <p>
+          Stay updated with the latest news and events happening at Anas bn
+          Malek School.
+        </p>
+        <ul>
+          <li class="news-item">
+            <img
+              src="Images/RAmadan 2A .jpg"
+              alt="School calibrat with Ramadan"
+            />
+            <p>School calibrat with Ramadan and Changed the look of Classes</p>
+            <p>Comments: The School now looks amazing -Asaad 2A</p>
+          </li>
+          <br />
+          <li class="news-item">
+            <img
+              src="Images/ART 'egypt in her children eyes'.png"
+              alt="ART Competition"
+            />
+            <p>ART Competition 'Egypt IN HER CHILDREN EYES'</p>
+            <p>Comments: WHO wins will get full marks in ART! - ART TEACHER</p>
+          </li>
+          <br />
+          <li class="news-item">
+            <img
+              src="Images/Screenshot From 2025-02-25 17-08-34.png"
+              alt="Art exhibition"
+            />
+            <p>Student in the School and the Principal agreed!</p>
+            <p>Comments: Very well! - Student C</p>
+          </li>
+        </ul>
+      </section>
 
-        <!-- Developer Section -->
-        <section id="developer" class="section">
-            <h2>About the Developer</h2>
-            <p>Hi, I'm Asaad, a student at Anas bn Malek School and the developer of this website. I love coding and creating interactive web pages. My sister Asma helped me a lot.</p>
-            <p>Check out my GitHub page for more projects:</p>
-            <a class="asaadzx" href="https://github.com/asaadzx" target="_blank">Asaadzx GitHub</a>
-            <a class="School" href="https://github.com/asaadzx/Anas-bn-malek-School" target="_blank">School repo</a>
-            <p>I am asking the school teachers for some images to add. Please and I am sorry for Secondary 1, 2, 3 And All Grades, because they have a lot of subjects and I NEED SOMEONE TO WORK WITH </p>
-        </section>
+      <!-- Downloads Section -->
+      <section id="downloads" class="section">
+        <h2>Downloads</h2>
+        <p>Download important documents and resources:</p>
 
+        <div class="dropdown-container">
+          <select id="downloadOption">
+            <option value="Primary-Grade1">Grade-1</option>
+            <option value="Primary-Grade2">Grade-2</option>
+            <option value="Primary-Grade3">Grade-3</option>
+            <option value="Primary-Grade4">Grade-4</option>
+            <option value="Primary-Grade5">Grade-5</option>
+            <option value="Primary-Grade6">Grade-6</option>
+            <option value="Prep-Prep1">Prep-1</option>
+            <option value="Prep-Prep2">Prep-2</option>
+            <option value="Prep-Prep3">Prep-3</option>
+            <option value="Sec-Sec1">Sec-1</option>
+            <option value="Sec-Sec2">Sec-2</option>
+            <option value="Sec-Sec3">Sec-3</option>
+          </select>
+        </div>
+
+        <ul id="downloadLinks">
+          <li>
+            <a class="English" href="" target="_blank">English evaluation</a>
+          </li>
+          <li>
+            <a class="Arabic" href="" target="_blank">Arabic evaluation</a>
+          </li>
+          <li>
+            <a class="Science" href="" target="_blank">Science evaluation</a>
+          </li>
+          <li><a class="Math" href="" target="_blank">Math evaluation</a></li>
+          <li>
+            <a class="Social" href="" target="_blank"
+              >الدراسات الاجتماعية evaluation</a
+            >
+          </li>
+          <li><a class="ICT" href="" target="_blank">ICT evaluation</a></li>
+        </ul>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to learn more about our
+          school, please reach out!
+        </p>
+        <form id="contact-form" class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <!-- Developer Section -->
+      <section id="developer" class="section">
+        <h2>About the Developer</h2>
+        <p>
+          Hi, I'm Asaad, a student at Anas bn Malek School and the developer of
+          this website. I love coding and creating interactive web pages. My
+          sister Asma helped me a lot.
+        </p>
+        <p>Check out my GitHub page for more projects:</p>
+        <a class="asaadzx" href="https://github.com/asaadzx" target="_blank"
+          >Asaadzx GitHub</a
+        >
+        <a
+          class="School"
+          href="https://github.com/asaadzx/Anas-bn-malek-School"
+          target="_blank"
+          >School repo</a
+        >
+        <p>
+          I am asking the school teachers for some images to add. Please and I
+          am sorry for Secondary 1, 2, 3 And All Grades, because they have a lot
+          of subjects and I NEED SOMEONE TO WORK WITH
+        </p>
+      </section>
     </div>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <--! Plausible Analytics !-->
+    <script
+      defer
+      data-domain="anas-bn-malek.netlify.app"
+      src="https://plausible.io/js/script.file-downloads.hash.outbound-links.revenue.js"
+    ></script>
+    <script>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+    </script>
     <script src="Funcs.js" defer></script>
-</body>
+  </body>
 </html>
