@@ -1,613 +1,718 @@
-/* General Styles */
+/* Anas-bn-Malek-School/style.css */
+
+/* -----------------------------------------------------------------------------
+   GLOBAL VARIABLES (Consider using CSS Custom Properties for larger projects)
+----------------------------------------------------------------------------- */
+/*  --primary-color: #d8b30f;
+    --secondary-color: #858336;
+    --accent-color: #dbc963;
+    --text-color-dark: #362a0a;
+    --text-color-light: #fff;
+    --background-color: #f4f4f9;
+    --card-background-color: #e7f3fe;
+    --student-card-background-color: #ffe0b2;
+    --link-hover-color: #858336;
+    (and so on...)  You would then use them like: color: var(--text-color-dark);
+     This makes large-scale changes *much* easier.
+*/
+
+/* -----------------------------------------------------------------------------
+   GENERAL STYLES / RESET
+----------------------------------------------------------------------------- */
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family:
+    "Helvetica Neue", Arial, sans-serif; /* Standard, widely available font stack */
+  margin: 0; /* Remove default body margins */
+  padding: 0; /* Remove default body padding */
+  background-color: #f4f4f9; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
 }
 
-/* Navbar Styles */
+/* -----------------------------------------------------------------------------
+   NAVIGATION BAR STYLES
+----------------------------------------------------------------------------- */
+
 .navbar {
-    background-color: rgba(216, 179, 15, 0.589);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    transition: height 0.3s ease;
+  background-color: rgba(216, 179, 15, 0.589); /* Semi-transparent gold */
+  backdrop-filter: blur(10px); /* Apply a blur effect (modern browsers) */
+  overflow: hidden; /* Hide overflowing content */
+  position: fixed; /* Fixed positioning at the top */
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000; /* Ensure navbar is above other content */
+  display: flex;
+  justify-content: space-between; /* Space items evenly */
+  align-items: center;
+  padding: 0 20px; /* Horizontal padding */
+  transition: height 0.3s ease; /* Smooth height transition */
 }
 
 .navbar a {
-    float: none;
-    display: inline-block;
-    color: #362a0a;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  float: none; /* Remove default float behavior */
+  display: inline-block;
+  color: #362a0a; /* Dark brown text */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none; /* Remove underlines */
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s; /* Smooth transitions */
 }
 
+.navbar a:hover {
+  background-color: #858336; /* Darker gold on hover */
+  rounded-corners: 5px; /* Rounded corners on hover */
+  color: white; /* White text on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Hamburger Menu Styles */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1001;
+  display: none; /* Hidden by default (for larger screens) */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* Ensure hamburger is above the navbar */
 }
 
 .hamburger .bar {
-    width: 100%;
-    height: 3px;
-    background-color: #362a0a;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+  width: 100%;
+  height: 3px;
+  background-color: #362a0a; /* Dark brown bars */
+  border-radius: 10px; /* Rounded corners */
+  transition: all 0.3s linear; /* Smooth transition for animation */
+  position: relative;
+  transform-origin: 1px; /* Set transform origin for rotation */
 }
 
+/* Active Navbar (Mobile Menu) */
 .navbar.active {
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar.active a {
+  display: block; /* Display links as blocks */
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ddd; /* Separator line */
+  animation: fadeIn 0.3s ease forwards; /* Fade-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   CONTENT SECTION STYLES
+----------------------------------------------------------------------------- */
+
+.content {
+  padding: 20px;
+  margin-top: 60px; /* Add margin to push content below the fixed navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px; /* Limit maximum width for larger screens */
+  text-align: center;
+  transition:
+    transform 0.3s,
+    opacity 0.3s; /* Smooth transitions */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially slightly moved down */
+}
+
+/* Visible Section (for Intersection Observer) */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1,
+h2 {
+  color: #dbc963; /* Gold color for headings */
+}
+
+/* -----------------------------------------------------------------------------
+  CARD STYLES (Teacher & Student)
+----------------------------------------------------------------------------- */
+
+.teacher-card,
+.student-card {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #e7f3fe; /* Light blue background for teacher cards */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition:
+    transform 0.3s,
+    opacity 0.3s,
+    box-shadow 0.3s;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially slightly moved down */
+  cursor: pointer;
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.teacher-card.visible,
+.student-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pseudo-element for hover effect on teacher cards */
+.teacher-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 179, 15, 0.1); /* Light gold overlay */
+  transform: scaleX(0); /* Initially scaled to 0 width */
+  transform-origin: right; /* Scale from the right */
+  transition: transform 0.3s ease;
+  z-index: -1; /* Place behind the content */
+}
+
+.teacher-card:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+  transform-origin: left; /* Scale from the left */
+}
+
+.student-card {
+  background-color: #ffe0b2; /* Light orange background for student cards */
+}
+
+.teacher-card:hover,
+.student-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+/* Card Click Animation */
+.teacher-card.clicked {
+  animation: cardClick 0.5s forwards;
+}
+
+@keyframes cardClick {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   NEWS ITEM STYLES
+----------------------------------------------------------------------------- */
+
+.news-item img {
+  width: 300px;
+  height: 250px;
+  border-radius: 50px; /* Rounded corners for images */
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0.8); /* Initially scaled down */
+}
+
+.news-item p {
+  font-size: medium;
+  font-weight: bolder;
+  color: #362a0a; /* Dark brown text */
+}
+
+.news-item img.visible {
+  opacity: 1;
+  transform: scale(1); /* Scale to normal size when visible */
+}
+.news-item img:hover {
+  transform: scale(1.1);
+}
+
+/* -----------------------------------------------------------------------------
+   FOOTER STYLES
+----------------------------------------------------------------------------- */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffe058; /* Gold background */
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* -----------------------------------------------------------------------------
+  DROPDOWN STYLES
+----------------------------------------------------------------------------- */
+
+.dropdown-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#downloadOption {
+  padding: 10px;
+  border: 2px solid #d8b30f; /* Gold border */
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  font-size: 16px;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #1d1c1b; /* Dark text */
+}
+
+#downloadLinks {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove list bullets */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#downloadLinks li {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  display: flex; /* For aligning icon and link */
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially moved down */
+  animation: fadeInUp 0.5s forwards; /* Fade-in animation */
+}
+#downloadLinks li:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-5px);
+}
+
+#downloadLinks li a {
+  text-decoration: none;
+  font-weight: bold;
+  flex-grow: 1; /* Allow link to take available space */
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #d8b30f;
+  color: #362a0a;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+
+#downloadLinks li a:hover {
+  text-decoration: underline;
+  background-color: #858336;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Show Download Links (Initially Hidden) */
+#downloadLinks li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Download Links Icon */
+#downloadLinks li::before {
+  content: "📄"; /* File icon */
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+/* -----------------------------------------------------------------------------
+  BUTTON/LINK STYLES (Reusable)
+----------------------------------------------------------------------------- */
+.asaadzx,
+.School {
+  /* Reusable button styles */
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #d8b30f;
+  color: #362a0a;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+
+.asaadzx:hover,
+.School:hover {
+  background-color: #858336;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* -----------------------------------------------------------------------------
+   CONTACT FORM STYLES
+----------------------------------------------------------------------------- */
+
+.contact-form button {
+  background-color: #d8b30f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d8b30f; /* Gold border on focus */
+  box-shadow: 0 0 10px rgba(216, 179, 15, 0.5); /* Gold glow */
+  outline: none; /* Remove default focus outline */
+}
+
+.contact-form button:hover {
+  background-color: #858336;
+  transform: scale(1.05);
+}
+
+/* -----------------------------------------------------------------------------
+  TEACHER PROFILE PAGE STYLES
+----------------------------------------------------------------------------- */
+
+.teacher-profile {
+  max-width: 800px;
+  margin: 80px auto 20px; /* Top margin to account for navbar */
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.teacher-profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image fills the circle */
+  border: 5px solid #d8b30f; /* Gold border */
+  margin-right: 30px;
+}
+
+.teacher-profile-info {
+  flex: 1; /* Take remaining space */
+}
+
+.teacher-profile-bio {
+  margin-bottom: 30px;
+  line-height: 1.6; /* Improved readability */
+}
+
+.teacher-social-links {
+  display: flex;
+  gap: 15px; /* Space between links */
+  margin-top: 20px;
+}
+
+.teacher-social-links a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #d8b30f;
+  color: #362a0a;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded links */
+  transition: all 0.3s ease;
+}
+
+.teacher-social-links a:hover {
+  background-color: #858336;
+  color: white;
+  transform: translateY(-3px); /* Slight upward movement on hover */
+}
+/* Back to Home Button */
+.back-to-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d8b30f;
+  color: #362a0a;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: #858336;
+  color: white;
+}
+
+/* -----------------------------------------------------------------------------
+   NEW KNOWLEDGE SECTION STYLES
+----------------------------------------------------------------------------- */
+
+.new-knowledge-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.new-knowledge-item {
+  background-color: #f9f9f9;
+  border: 2px solid #d8b30f; /* Gold border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initially moved down */
+}
+
+.new-knowledge-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.new-knowledge-item p {
+  font-size: 16px;
+  color: #362a0a;
+  text-align: center;
+}
+
+.new-knowledge-item h3 {
+  color: #d8b30f;
+}
+
+.new-knowledge-item a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #d8b30f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.new-knowledge-item a:hover {
+  color: #858336;
+}
+
+/* -----------------------------------------------------------------------------
+   VIDEO CONTAINER STYLES
+----------------------------------------------------------------------------- */
+
+.video-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.video-container h3 {
+  margin-bottom: 10px;
+  color: #362a0a;
+}
+.video-container iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* -----------------------------------------------------------------------------
+   MEDIA QUERIES (Responsive Design)
+----------------------------------------------------------------------------- */
+
+/* --- Larger Screens --- */
+@media (max-width: 1024px) {
+  .section {
+    width: 90%; /* Slightly wider sections */
+  }
+}
+
+/* --- Tablet Styles --- */
+@media (max-width: 768px) {
+  .navbar a {
+    display: none; /* Hide navigation links */
+  }
+
+  .navbar.active a {
     display: block;
     width: 100%;
     text-align: center;
     padding: 10px;
     border-top: 1px solid #ddd;
-    animation: fadeIn 0.3s ease forwards;
-}
+  }
+  .hamburger {
+    display: flex; /* Show hamburger menu */
+    margin-left: 20px;
+  }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
 
-/* Content Styles */
-.content {
-    padding: 20px;
-    margin-top: 60px;
-    display: flex;
+  .navbar.active {
+    align-items: center; /* Center items in active state */
+  }
+
+  .new-knowledge-item {
+    width: 80%; /* Wider knowledge items */
+  }
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+  .teacher-profile-header {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
+  }
 
-.section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-h1, h2 {
-    color: #dbc963;
-}
-
-.teacher-card, .student-card {
-    display: inline-block;
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #e7f3fe;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-    opacity: 0;
-    transform: translateY(20px);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.teacher-card.visible, .student-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.teacher-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(216, 179, 15, 0.1);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-    z-index: -1;
-}
-
-.teacher-card:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.student-card {
-    background-color: #ffe0b2;
-}
-
-.news-item img {
-    width: 300px;
-    height: 250px;
-    border-radius: 50px;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-.news-item p {
-    font-size: medium;
-    font-weight: bolder;
-    color: #362a0a;
-}
-
-.news-item img.visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffe058;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.dropdown-container {
+  .teacher-profile-image {
+    margin-right: 0;
     margin-bottom: 20px;
-    display: flex;
+  }
+
+  .teacher-profile-info {
+    text-align: center;
+  }
+
+  .teacher-social-links {
     justify-content: center;
-    align-items: center;
+  }
 }
 
-#downloadOption {
-    padding: 10px;
-    border: 2px solid #d8b30f;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px;
-    background-color: #f8f9fa;
-    color: #1d1c1b;
-}
+/* --- Mobile Styles --- */
+@media (max-width: 480px) {
+  .navbar a {
+    padding: 8px 10px; /* Smaller padding for links */
+  }
 
-#downloadLinks {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
+  .section {
+    width: 95%; /* Almost full-width sections */
+    padding: 15px;
+  }
+
+  .footer {
+    padding: 15px;
+  }
+
+  .new-knowledge-item {
+    width: 95%; /* Almost full-width knowledge items */
+  }
+
+  .teacher-profile {
+    padding: 20px;
+  }
+
+  .teacher-profile-header {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-#downloadLinks li {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 10px;
-    transition: background-color 0.3s, transform 0.3s;
-    display: flex;
+  .teacher-profile-image {
+    width: 120px;
+    height: 120px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .teacher-profile-info {
+    text-align: center;
+  }
+
+  .teacher-social-links {
+    flex-direction: column;
     align-items: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
-}
+  }
 
-#downloadLinks li a {
-    text-decoration: none;
-    font-weight: bold;
-    flex-grow: 1;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #d8b30f;
-    color: #362a0a;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  .teacher-social-links a {
+    margin-bottom: 10px;
+  }
 }
-
-.asaadzx, .School {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #d8b30f;
-    color: #362a0a;
-    text-decoration: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
-#downloadLinks li.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contact-form button {
-    background-color: #d8b30f;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Hover Styles */
-.navbar a:hover {
-    background-color: #858336;
-    color: white;
-    transform: scale(1.1);
-}
-
-.teacher-card:hover, .student-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.teacher-card.clicked {
-    animation: cardClick 0.5s forwards;
-}
-
-@keyframes cardClick {
-    0% {
-        transform: scale(1.05);
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-/* Teacher profile page styles */
-.teacher-profile {
-    max-width: 800px;
-    margin: 80px auto 20px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.teacher-profile-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.teacher-profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #d8b30f;
-    margin-right: 30px;
-}
-
-.teacher-profile-info {
-    flex: 1;
-}
-
-.teacher-profile-bio {
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.teacher-social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.teacher-social-links a {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #d8b30f;
-    color: #362a0a;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.teacher-social-links a:hover {
-    background-color: #858336;
-    color: white;
-    transform: translateY(-3px);
-}
-
-.back-to-home {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #d8b30f;
-    color: #362a0a;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.back-to-home:hover {
-    background-color: #858336;
-    color: white;
-}
-
-.news-item img:hover {
-    transform: scale(1.1);
-}
-
-.asaadzx:hover, .School:hover {
-    background-color: #858336;
-    color: white;
-    transform: scale(1.1);
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #d8b30f;
-    box-shadow: 0 0 10px rgba(216, 179, 15, 0.5);
-    outline: none;
-}
-
-.contact-form button:hover {
-    background-color: #858336;
-    transform: scale(1.05);
-}
-
-#downloadLinks li:hover {
-    background-color: #e2e6ea;
-    transform: translateY(-5px);
-}
-
-#downloadLinks li a:hover {
-    text-decoration: underline;
-    background-color: #858336;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Additional Styles */
-#downloadLinks li::before {
-    content: "📄";
-    margin-right: 10px;
-    font-size: 1.5em;
-}
+/* -----------------------------------------------------------------------------
+   ANIMATIONS (Reusable)
+----------------------------------------------------------------------------- */
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* New Knowledge Section */
-.new-knowledge-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.new-knowledge-item {
-    background-color: #f9f9f9;
-    border: 2px solid #d8b30f;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, opacity 0.3s;
+  from {
     opacity: 0;
     transform: translateY(20px);
-}
-
-.new-knowledge-item.visible {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
-}
-
-.new-knowledge-item p {
-    font-size: 16px;
-    color: #362a0a;
-    text-align: center;
-}
-
-.new-knowledge-item h3 {
-    color: #d8b30f;
-}
-
-.new-knowledge-item a {
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    color: #d8b30f;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.new-knowledge-item a:hover {
-    color: #858336;
-}
-
-.video-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.video-container h3 {
-    margin-bottom: 10px;
-    color: #362a0a;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-    .section {
-        width: 90%;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar a {
-        display: none;
-    }
-
-    .navbar.active a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid #ddd;
-    }
-
-    .hamburger {
-        display: flex;
-        margin-left: 20px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar.active {
-        align-items: center;
-    }
-
-    .new-knowledge-item {
-        width: 80%;
-    }
-
-    .video-container iframe {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar a {
-        padding: 8px 10px;
-    }
-    .section {
-        width: 95%;
-        padding: 15px;
-    }
-    .footer {
-        padding: 15px;
-    }
-
-    .new-knowledge-item {
-        width: 95%;
-    }
-}
-
-/* Responsive Styles for Teacher Profile Page */
-@media (max-width: 768px) {
-    .teacher-profile-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .teacher-profile-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .teacher-profile-info {
-        text-align: center;
-    }
-
-    .teacher-social-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .teacher-profile {
-        padding: 20px;
-    }
-
-    .teacher-profile-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .teacher-profile-image {
-        width: 120px;
-        height: 120px;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .teacher-profile-info {
-        text-align: center;
-    }
-
-    .teacher-social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .teacher-social-links a {
-        margin-bottom: 10px;
-    }
+  }
 }
