@@ -68,7 +68,7 @@ body {
 
 .navbar a:hover {
   background-color: #858336; /* Darker gold on hover */
-  rounded-corners: 5px; /* Rounded corners on hover */
+  border-radius: 15px; /* Rounded corners on hover */
   color: white; /* White text on hover */
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
