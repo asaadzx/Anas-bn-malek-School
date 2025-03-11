@@ -53,3 +53,10 @@ If you have any questions or need further assistance, please reach out to us at 
 ---
 
 Thank you for visiting the Anas bn Malek School project! We hope you enjoy exploring our website. 🌟 (ㅅ´ ˘ `)
+
+TODOs:
+- [ ] Add more information about the school.
+- [ ] Include photos of teachers and students.
+- [ ] Implement a contact form for visitors.
+- [ ] Add a gallery of school events and activities.
+- [ ] Create Ackee analytics self-hosted with mongoDB or alternative.
