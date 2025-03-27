@@ -60,3 +60,5 @@ TODOs:
 - [ ] Implement a contact form for visitors.
 - [ ] Add a gallery of school events and activities.
 - [ ] Create Ackee analytics self-hosted with mongoDB or alternative.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b25d9c60-0f69-43f5-8812-82107fce69e3/deploy-status)](https://app.netlify.com/sites/anas-bn-malek/deploys)
