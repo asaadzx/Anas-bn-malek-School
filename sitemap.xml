@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#about</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Teachers Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#teachers</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Students Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#students</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- New Knowledge Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#new-knowledge</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- News Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#news</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Downloads Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#downloads</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Contact Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#contact</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Developer Section -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/#developer</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>
