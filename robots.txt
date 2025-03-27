@@ -1,0 +1,8 @@
+# Allow all search engines to crawl the site
+User-agent: *
+
+# Allow crawling of all content
+Allow: /
+
+# Sitemap location
+Sitemap: https://anas-bn-malek.netlify.app/sitemap.xml

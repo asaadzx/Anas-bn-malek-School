@@ -24,6 +24,38 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- Individual Teacher Pages -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/teachers/sara</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/teachers/hend</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/teachers/ahmed</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/teachers/yasmen</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/teachers/khaled</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <!-- Students Section -->
     <url>
         <loc>https://anas-bn-malek.netlify.app/#students</loc>
@@ -70,5 +102,13 @@
         <lastmod>2025-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.4</priority>
+    </url>
+
+    <!-- Additional Resources -->
+    <url>
+        <loc>https://anas-bn-malek.netlify.app/resources</loc>
+        <lastmod>2025-03-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
