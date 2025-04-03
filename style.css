@@ -41,14 +41,12 @@ body {
   background-color: rgba(216, 179, 15, 0.589); /* Semi-transparent gold */
   backdrop-filter: blur(10px); /* Apply a blur effect (modern browsers) */
   overflow: hidden; /* Hide overflowing content */
-  position: fixed; /* Fixed positioning at the top */
   top: 0;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   z-index: 1000; /* Ensure navbar is above other content */
   display: flex;
   justify-content: space-between; /* Space items evenly */
-  align-items: center;
   padding: 0 20px; /* Horizontal padding */
   transition: height 0.3s ease; /* Smooth height transition */
 }
